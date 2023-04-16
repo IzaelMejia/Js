@@ -4,10 +4,71 @@ Biblia de Conceptos Js
 Funciones: Las funciones son bloques de codigo que realizan una tarea en especifico 
 y pueden ser reutilizadas en diferentes partes del programa.
 
-Tipo de Funciones
+-----------------------Tipo de Funciones-----------------------
 
-Funciones anónimas: Función que se define sin nombre y se usa para ser pasada como parametro 
-o asignada a una variable.Las anonimas por lo general se definen como const (x , y)
+Funciones declarativas:Son definidas "function" y lleva parametros que recibirá. 
+Permitir la ejecución de una acción específica cuando se llame a la función.
+
+function suma(a, b) {
+  return a + b;
+}
+
+--------------------------------------
+
+Funciones expresivas: Se asigna una variable a la función, permitir la creación de funciones 
+anónimas que se puedan asignar a variables o pasar como argumentos de otras funciones. 
+Tienen la ventaja de poder crear closures y devolver objetos con métodos privados, lo que puede ser útil en algunos casos.
+
+const sumar = function(a, b) {
+  return a + b;
+};
+
+------------------------------------------------------------------------------------------------------------------
+						DIFERENCIA DE funciones DECLARATIVAS Y EXPRESIVAS
+------------------------------------------------------------------------------------------------------------------
+En resumen, las funciones declarativas son más adecuadas para funciones generales y funciones que necesitan ser llamadas desde diferentes partes del código, mientras que las funciones expresivas son más útiles para funciones específicas que se utilizan en un contexto particular y que no necesitan ser invocadas desde otros lugares del código.
+------------------------------------------------------------------------------------------------------------------
 
 
-Función flecha: Escribir funciones en una sola linea
+Función flecha: Escribir funciones en una sola linea,  forma simplificada de las funciones expresivas 
+
+const sumar = (a, b) => {
+  return a + b;
+};
+
+--------------------------------------
+
+Funciones anónimas: no tienen nombre y se utilizan generalmente como argumentos de otras funciones.
+ permitir la creación de funciones que sólo se utilizarán en un lugar específico sin necesidad de definirlas previamente. 
+
+setTimeout(function() {
+  console.log("Este mensaje se imprimirá después de 3 segundos");
+}, 3000);
+
+--------------------------------------
+
+Métodos de objeto:
+Son funciones que se definen dentro de un objeto y se utilizan para realizar operaciones sobre ese objeto. Su función principal es permitir la definición de acciones que se pueden realizar sobre un objeto específico. 
+
+
+const miObjeto = {
+  nombre: "Juan",
+  saludar: function() {
+    console.log("Hola, mi nombre es " + this.nombre);
+  }
+};
+miObjeto.saludar();
+
+--------------------------------------
+Funciones Constructoras:
+se utilizan para crear objetos que comparten las mismas propiedades y métodos. Su función principal es 
+permitir la creación de objetos complejos de forma más eficiente y ordenada. 
+
+function Persona(nombre, edad) {
+  this.nombre = nombre;
+  this.edad = edad;
+}
+const juan = new Persona("Juan", 25);
+
+
+--------------------------------------
