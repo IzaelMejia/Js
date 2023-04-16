@@ -143,3 +143,88 @@ while(entrada != "ESC" ){
 //    }
 //    entrada = prompt("Ingresar un nombre");
 // }
+
+//-----------------------------------------------------------------------------------------------------------------------------
+
+
+// Ejercicicoo Pedir número mediante prompt y sumarle otro número 
+//en cada repetición,realizando una salida por cada resultado
+
+// let entrada, contador , sumado
+
+// for (let i = 1; i <=5; i++) {
+    
+//     entrada= Number (prompt("Dame un numero"))
+//     sumado= Number (prompt("Dame un a sumar"))
+    
+//     contador= entrada + sumado
+//     alert("Suma: " + contador)
+     
+// }
+
+//-----------------------------------------------------------EJEMPLO------------------------------------------------------------------
+
+
+//Pedir un texto mediante prompt, concatenar un valor en cada repetición, realizando una salida por cada resultado, hasta que se ingresa “ESC”.
+
+// let entrada, contador , sumado
+
+// while(entrada != "ESC"){
+//     entrada=prompt("Ingresa una entrada de texto: ")
+//     contador=entrada+"2"
+//     alert(contador)
+
+// }
+
+
+//----------------------------------------------------------EJEMPLO-------------------------------------------------------------------
+
+//Pedir un número por prompt, repetir la salida del mensaje “Hola” la cantidad de veces 
+
+// let entrada = Number(prompt("Dame un numero"))
+// for(let i=1; i<=entrada; i++){
+//     alert("Hola" + " "+ i)
+// }
+
+//-----------------------------------------------------------------------------------------------------------------------------
+
+//    Calcular la suma de los números del 1 al 100:
+
+// let resultado=0
+// for(let i=0; i<=100; i++){
+//    resultado= resultado+i
+//    alert(resultado)
+
+// }
+// alert(resultado)
+
+//-----------------------------------------------------------------------------------------------------------------------------
+
+//Imprimir los números del 1 al 50, pero si el número es múltiplo de 3 imprimir "Fizz" en vez del número,
+// si es múltiplo de 5 imprimir "Buzz", y si es múltiplo de ambos imprimir "FizzBuzz":
+
+// for (let i = 1; i <= 50; i++) {
+//     if (i % 3 === 0 && i % 5 === 0) {
+//       console.log("FizzBuzz");
+//     } else if (i % 3 === 0) {
+//       console.log("Fizz");
+//     } else if (i % 5 === 0) {
+//       console.log("Buzz");
+//     } else {
+//       console.log(i);
+//     }
+// }
+
+//-----------------------------------------------------------------------------------------------------------------------------
+
+//Se requiere un algoritmo para obtener la edad promedio de n alumnos
+let alumnosRegistrados = Number(prompt("Alumnos a registrar"))
+let edadRegistro //registro de las edades
+let suma =0  //acumulador de las edades
+
+
+for(i=1; i<=alumnosRegistrados;i++){
+    edadRegistro= Number(prompt("Edad del alumno" + i))
+    suma=suma + edadRegistro
+}
+alert("El promedio de las edades de los "+ alumnosRegistrados+ " alumnos es: "+ suma/alumnosRegistrados )

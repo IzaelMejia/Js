@@ -1,0 +1,13 @@
+
+Biblia de Conceptos Js
+
+Funciones: Las funciones son bloques de codigo que realizan una tarea en especifico 
+y pueden ser reutilizadas en diferentes partes del programa.
+
+Tipo de Funciones
+
+Funciones anónimas: Función que se define sin nombre y se usa para ser pasada como parametro 
+o asignada a una variable.Las anonimas por lo general se definen como const (x , y)
+
+
+Función flecha: Escribir funciones en una sola linea
